@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signs of Recession</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Smoke / Grain Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  opacity: 0.15;
+  animation: smoke 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes smoke {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(50px,50px); }
+  100% { transform: translate(0,0); }
+}
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.9);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #111;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: crimson;
+  text-shadow: 0 0 10px crimson, 0 0 20px crimson;
+}
+
+/* Sections */
+section {
+  padding: 100px 10%;
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(3px);
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Hero */
+.hero {
+  min-height: 75vh;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 800px;
+  width: 90%;
+  margin-bottom: 10px;
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 20px;
+}
+
+/* Members */
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.member {
+  background: #111;
+  padding: 20px;
+  border-left: 4px solid crimson;
+  transition: 0.3s;
+}
+
+.member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px crimson;
+}
+
+.member h3 {
+  color: crimson;
+  margin-top: 0;
+}
+
+/* Photos */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.photos img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid #111;
+  transition: 0.3s;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px crimson;
+}
+
+/* Instagram Section */
+.instagram {
+  text-align: center;
+}
+
+.instagram a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 2px solid crimson;
+  color: crimson;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.instagram a:hover {
+  background: crimson;
+  color: black;
+  box-shadow: 0 0 20px crimson;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #050505;
+  color: #666;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div><strong>SIGNS OF RECESSION</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#members">Members</a>
+    <a href="#photos">Photos</a>
+    <a href="#inspiration">Inspiration</a>
+    <a href="#instagram">Instagram</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="logo.png" alt="Band Logo">
+  <h1>Fort Wayne, IN</h1>
+  <p>Nu Metal • Metalcore • Post Hardcore</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About the Band</h2>
+  <p>
+    Signs of Recession is a project by 17 year old Vann Toensing (me), I've loved nu metal, metalcore, and post hardcore forever now, I've always wanted to start my own band. Im finally starting something and I hope soon I'll find members and make something of ourselves.
+  </p>
+</section>
+
+<!-- MEMBERS -->
+<section id="members" style="background:#0f0f0f;">
+  <h2>Band Members</h2>
+  <div class="members">
+    <div class="member">
+      <h3>Vocalist</h3>
+      <p>Vann Toensing</p>
+      <p>"I like to yell"</p>
+    </div>
+    <div class="member">
+      <h3>Guitarist</h3>
+      <p>Name Here</p>
+      <p>tbd</p>
+    </div>
+    <div class="member">
+      <h3>Bassist</h3>
+      <p>Name Here</p>
+      <p>tbd</p>
+    </div>
+    <div class="member">
+      <h3>Drummer</h3>
+      <p>Name Here</p>
+      <p>tbd</p>
+    </div>
+    <div class="member">
+      <h3>DJ</h3>
+      <p>Name Here</p>
+      <p>tbd</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+  <h2>Photos</h2>
+  <div class="photos">
+    <img src="1.jpg" alt="">
+    <img src="2.jpg" alt="">
+    <img src="3.jpg" alt="">
+    <img src="4.jpg" alt="">
+    <img src="5.jpg" alt="">
+  </div>
+</section>
+
+<!-- INSPIRATION -->
+<section id="inspiration" style="background:#0f0f0f;">
+  <h2>Inspiration</h2>
+  <p>
+    Inspired by several bands like Calm, Monkeynut, Phoenix Mourning and the general speed and intensity of the genres.
+  </p>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="instagram">
+  <h2>Follow Us</h2>
+  <p>Stay updated with news from the band.</p>
+  <a href="https://www.instagram.com/signs_of_recession?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+    FOLLOW ON INSTAGRAM
+  </a>
+</section>
+
+<footer>
+  © 2026 Signs of Recession | All Rights Reserved
+</footer>
+
+<script>
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 0);
+  });
+</script>
+
+</body>
+</html>
